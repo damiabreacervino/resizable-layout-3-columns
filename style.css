@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Financier Display';
+  src: url('test-financier-display-medium-italic.woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Financier Text';
+  src: url('test-financier-text-regular.woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: calc(16px + 0.75vmax);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Financier Text', Arial, sans-serif;
+  line-height: 1.15;
+}
+
+header {
+  padding: 1rem 2rem;
+}
+
+section {
+  position: relative;
+  background-color: #7f6f68;
+  color: white;
+}
+
+section div.content {
+  display: grid;
+
+  grid-template-columns: minmax(20px, 33.3%) minmax(20px, 33.3%) minmax(20px, 33.3%);
+}
+
+section div.content div.copy {
+  padding: 2rem;
+}
+
+section div img {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+section a.handleFirst {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33.3%;
+  width: 10px;
+  transform: translate(-33.3%, 0%);
+  z-index: 10;
+  background-color: blue;
+  cursor: ew-resize;
+}
+
+section a.handleSecond {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 66.6%;
+  width: 10px;
+  transform: translate(-66.6%, 0%);
+  z-index: 10;
+  background-color: blue;
+  cursor: ew-resize;
+}
+
+h2,
+h3,
+p,
+blockquote {
+  max-width: 24em;
+}
+
+h1,
+h2,
+blockquote {
+  font-family: 'Financier Display', 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+p,
+blockquote {
+  margin: 1.3em 0;
+}
+
+h3+p {
+  margin-top: 0.1em;
+}
+
+blockquote {
+  font-size: 1.25rem;
+}
